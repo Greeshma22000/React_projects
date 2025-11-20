@@ -6,7 +6,7 @@ const Practice = () => {
 
   useEffect(() => {
     setCalculation(() => count * 2);
-  },[count])
+  },[count]);
   
   return (
     <div>

@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "animate.css";
 import {Badge, Button, Card, Form, Input, Modal, Select, Tag} from 'antd';
 import {Plus} from "lucide-react"
 
 const App = () => {
   const [open,setOpen] = useState(false);
+  const [timer, setTimer] = useState(new Date().toLocaleTimeString());
 
   const createTask = (value) => {
     console.log(value);
@@ -14,6 +15,12 @@ const App = () => {
     setOpen(false);
   }
 
+  useEffect(() => {
+    setInterval(() => {
+      setTimer(new Date().toLocaleTimeString())
+    }, 1000)
+  },[])
+
   return (
     <div className='bg-gray-200 h-screen overflow-hidden'>
       <nav className='bg-white h-[60px] fixed top-0 left-0 w-full flex justify-between items-center px-8'>
@@ -21,7 +28,7 @@ const App = () => {
           <button className='w-10 h-10 bg-violet-600 rounded-full font-bold text-white'>TP</button>
           <h1 className='text-2xl font-bold ml-px'>Task Planner</h1>
         </div>
-        <h1 className='text-2xl font-bold'>12:10:00 AM</h1>
+        <h1 className='text-2xl font-bold'>{timer}</h1>
       </nav>
       
       <section className='fixed top-[60px] left-0 h-[calc(100%-120px)] w-full over-x-auto overflow-y-visible grid grid-cols-3 gap-8 p-8'>
