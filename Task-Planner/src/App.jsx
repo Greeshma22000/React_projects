@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "animate.css";
-import {Badge, Card} from 'antd';
+import {Badge, Button, Card, Form, Input, Modal, Select, Tag} from 'antd';
 import {Plus} from "lucide-react"
 
 const App = () => {
+  const [open,setOpen] = useState(false);
+
+  const createTask = (value) => {}
   return (
     <div className='bg-gray-200 h-screen overflow-hidden'>
       <nav className='bg-white h-[60px] fixed top-0 left-0 w-full'>
@@ -23,14 +26,25 @@ const App = () => {
             </button>
             <div className='flex flex-col gap-8'>
               {
-                Array(10).fill(0).map((item, index) => {
-                  <Card>
+                Array(10).fill(0).map((item, index) => (
+                  <Card hoverable key={index}>
                     <Card.Meta
                     title="Upload new video on youtube"
                     description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto velit quaerat quasi obcaecati corrupti exercitationem minus. Ut, optio?"
                     />
+                    <div className='mt-4 flex justify-between items-center'>
+                      <div>
+                        <Tag>Pending</Tag>
+                        <Tag className='!bg-rose-500 !border-rose-500 !text-white'>Delete</Tag>
+                      </div>
+                      <Select size="small" placeholder="Change status">
+                        <Select.Option value="pending">Pending</Select.Option>
+                        <Select.Option value="inProgress">Inprogress</Select.Option>
+                        <Select.Option value="completed">Completed</Select.Option>
+                      </Select>
+                    </div>
                   </Card>
-                })
+                ))
               }
             </div>
           </div>
@@ -60,6 +74,31 @@ const App = () => {
       <footer className='bg-white h-[60px] fixed bottom-0 left-0 w-full'>
 
       </footer>
+      <Modal open={open} footer={null}>
+        <h1 className='text-lg font-medium mb-4'>New task</h1>
+        <Form onFinish={createTask}>
+          <Form.Item
+            name="title"
+            rules={[{required: true}]}
+          >
+            <Input 
+                placeholder='Task name'
+            />
+          </Form.Item>
+           <Form.Item
+            name="description"
+            rules={[{required: true}]}
+          >
+            <Input.TextArea 
+                placeholder='Task description goes here'
+                rows={5}
+            />
+          </Form.Item>
+          <Form.Item>
+            <Button htmlType='submit' type='primary' size='large'>Submit</Button>
+          </Form.Item>
+        </Form>
+      </Modal>
     </div>
   )
 }
