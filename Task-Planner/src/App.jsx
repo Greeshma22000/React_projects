@@ -163,6 +163,7 @@ const App = () => {
                 placeholder='Task name'
             />
           </Form.Item>
+
            <Form.Item
             name="description"
             rules={[{required: true}]}
@@ -172,6 +173,18 @@ const App = () => {
                 rows={5}
             />
           </Form.Item>
+
+          <Form.Item
+            name="priority"
+            rules={[{required: true}]}
+          >
+            <Select>
+              <Select.Option value="high">High</Select.Option>
+              <Select.Option value="medium">Medium</Select.Option>
+              <Select.Option value="low">Low</Select.Option>
+            </Select>
+          </Form.Item>
+
           <Form.Item>
             <Button htmlType='submit' type='primary' size='large'>Submit</Button>
           </Form.Item>
