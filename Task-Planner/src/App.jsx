@@ -32,9 +32,13 @@ const App = () => {
           <button className='w-10 h-10 bg-violet-600 rounded-full font-bold text-white'>TP</button>
           <h1 className='text-2xl font-bold ml-px'>Task Planner</h1>
         </div>
-        <div className='flex gap-4 items-center'>
-          <DatePicker />
+        <div className='flex gap-5 items-center'>
+          <DatePicker className='py-1.5' />
           <h1 className='text-2xl font-bold'>{timer}</h1>
+           <button onClick={() => setOpen(true)} className='focus:shadow-lg hover:scale-105 transition-translate duration-300 item-center py-2 px-3 rounded-2xl text-m bg-gradient-to-tr from-violet-600 via-violet-500 to-violet-600 text-white flex gap-1 font-medium'>
+              <Plus />
+              Add task
+            </button>
         </div>
       </nav>
       
@@ -45,10 +49,6 @@ const App = () => {
             className='!bg-gradient-to-br !from-rose-500 !via-pink-500 !to-rose-500 !font-medium' 
           />
           <div className='bg-white rounded-lg h-full min-h-0 overflow-auto p-6 space-y-8'>
-            <button onClick={() => setOpen(true)} className='focus:shadow-lg hover:scale-105 transition-translate duration-300 item-center py-2 px-3 rounded-2xl text-m bg-gradient-to-tr from-violet-600 via-violet-500 to-violet-600 text-white flex gap-1 font-medium'>
-              <Plus />
-              Add task
-            </button>
             <div className='flex flex-col gap-8'>
               {
                 Array(10).fill(0).map((item, index) => (
@@ -81,10 +81,6 @@ const App = () => {
             className='!bg-gradient-to-br !from-indigo-500 !via-blue-500 !to-indigo-500 !font-medium' 
           />
           <div className='bg-white rounded-lg h-full min-h-0 overflow-auto p-6 space-y-8'>
-            <button onClick={() => setOpen(true)} className='focus:shadow-lg hover:scale-105 transition-translate duration-300 item-center py-2 px-3 rounded-2xl text-m bg-gradient-to-tr from-violet-600 via-violet-500 to-violet-600 text-white flex gap-1 font-medium'>
-              <Plus />
-              Add task
-            </button>
             <div className='flex flex-col gap-8'>
               {
                 Array(10).fill(0).map((item, index) => (
@@ -117,10 +113,6 @@ const App = () => {
             className='!bg-gradient-to-br !from-amber-500 !via-orange-500 !to-amber-500 !font-medium' 
           />
           <div className='bg-white rounded-lg h-full min-h-0 overflow-auto p-6 space-y-8'>
-            <button onClick={() => setOpen(true)} className='focus:shadow-lg hover:scale-105 transition-translate duration-300 item-center py-2 px-3 rounded-2xl text-m bg-gradient-to-tr from-violet-600 via-violet-500 to-violet-600 text-white flex gap-1 font-medium'>
-              <Plus />
-              Add task
-            </button>
             <div className='flex flex-col gap-8'>
               {
                 Array(10).fill(0).map((item, index) => (
