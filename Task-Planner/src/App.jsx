@@ -46,7 +46,7 @@ const App = () => {
         <div className='lg:h-full lg:min-h-0 h-[300px]'>
           <Badge.Ribbon 
             text="High"
-            className='!bg-gradient-to-br !from-rose-500 !via-pink-500 !to-rose-500 !font-medium' 
+            className='!bg-gradient-to-br !from-rose-500 !via-pink-500 !to-rose-500 !font-medium !z-[20000]' 
           />
           <div className='bg-white rounded-lg h-full min-h-0 overflow-auto p-6 space-y-8'>
             <div className='flex flex-col gap-8'>
@@ -78,7 +78,7 @@ const App = () => {
         <div className='lg:h-full lg:min-h-0 h-[300px]'>
           <Badge.Ribbon 
             text="Medium"
-            className='!bg-gradient-to-br !from-indigo-500 !via-blue-500 !to-indigo-500 !font-medium' 
+            className='!bg-gradient-to-br !from-indigo-500 !via-blue-500 !to-indigo-500 !font-medium !z-[20000]' 
           />
           <div className='bg-white rounded-lg h-full min-h-0 overflow-auto p-6 space-y-8'>
             <div className='flex flex-col gap-8'>
@@ -110,7 +110,7 @@ const App = () => {
         <div className='lg:h-full lg:min-h-0 h-[300px]'>
           <Badge.Ribbon 
             text="Low"
-            className='!bg-gradient-to-br !from-amber-500 !via-orange-500 !to-amber-500 !font-medium' 
+            className='!bg-gradient-to-br !from-amber-500 !via-orange-500 !to-amber-500 !font-medium !z-[20000]' 
           />
           <div className='bg-white rounded-lg h-full min-h-0 overflow-auto p-6 space-y-8'>
             <div className='flex flex-col gap-8'>
