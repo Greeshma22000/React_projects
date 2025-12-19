@@ -30,7 +30,7 @@ const App = () => {
         colors.push({
         gradient: `radial-gradient(circle, ${color1}, ${color2})`,
         css: `background: 'radial-gradient(circle ${color1}, ${color2})'`,
-      })
+        })
       }
     }
     setGradients(colors)
