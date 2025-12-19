@@ -38,8 +38,8 @@ const App = () => {
         </div>
       </nav>
       
-      <section className='fixed top-[60px] left-0 h-[calc(100%-120px)] w-full over-x-auto overflow-y-visible grid grid-cols-3 gap-8 p-8'>
-        <div className='h-full min-h-0'>
+      <section className='fixed top-[60px] left-0 h-[calc(100%-120px)] w-full over-x-auto overflow-y-visible grid lg:grid-cols-3 gap-8 p-8'>
+        <div className='lg:h-full lg:min-h-0 h-[300px]'>
           <Badge.Ribbon 
             text="High"
             className='!bg-gradient-to-br !from-rose-500 !via-pink-500 !to-rose-500 !font-medium' 
@@ -75,7 +75,7 @@ const App = () => {
           </div>
         </div>
 
-        <div className='h-full min-h-0'>
+        <div className='g:h-full lg:min-h-0 h-[300px]'>
           <Badge.Ribbon 
             text="Medium"
             className='!bg-gradient-to-br !from-indigo-500 !via-blue-500 !to-indigo-500 !font-medium' 
@@ -111,7 +111,7 @@ const App = () => {
           </div>
         </div>
 
-        <div className='h-full min-h-0'>
+        <div className='g:h-full lg:min-h-0 h-[300px]'>
           <Badge.Ribbon 
             text="Low"
             className='!bg-gradient-to-br !from-amber-500 !via-orange-500 !to-amber-500 !font-medium' 
