@@ -2,13 +2,16 @@ import React, { useEffect, useState } from 'react'
 import "animate.css";
 import {Badge, Button, Card, DatePicker, Form, Input, Modal, Select, Tag} from 'antd';
 import {Plus} from "lucide-react"
+import { usePlanner } from './store/usePlanner';
+import '@ant-design/v5-patch-for-react-19';
 
 const App = () => {
   const [open,setOpen] = useState(false);
   const [timer, setTimer] = useState(new Date().toLocaleTimeString());
+  const {tasks, addTask} = usePlanner();
 
   const createTask = (value) => {
-    console.log(value);
+    addTask(value);
   }
 
   const handleClose = () => {
