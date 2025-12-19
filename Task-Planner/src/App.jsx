@@ -33,8 +33,8 @@ const App = () => {
           <h1 className='text-2xl font-bold ml-px'>Task Planner</h1>
         </div>
         <div className='flex gap-5 items-center'>
+          <h1 className='text-2xl font-bold lg:block hidden'>{timer}</h1>
           <DatePicker className='py-1.5' />
-          <h1 className='text-2xl font-bold'>{timer}</h1>
            <button onClick={() => setOpen(true)} className='focus:shadow-lg hover:scale-105 transition-translate duration-300 item-center py-2 px-3 rounded-2xl text-m bg-gradient-to-tr from-violet-600 via-violet-500 to-violet-600 text-white flex gap-1 font-medium'>
               <Plus />
               Add task
@@ -140,9 +140,9 @@ const App = () => {
         </div>
       </section>
 
-      <footer className='bg-white h-[60px] fixed bottom-0 left-0 w-full flex items-center justify-between px- 8'>
+      <footer className='bg-gradient-to-l from-rose-500 via-slate-800 to-slate-900 text-white bg-white h-[60px] fixed bottom-0 left-0 w-full flex items-center justify-between px- 8'>
         <h1 className='text-2xl font-bold ml-10'>Total tasks - 22</h1>
-        <a href="#" className='text-gray-400 hover:underline mr-10'>https://tp.com</a>
+        <a href="#" className='hover:underline mr-10'>https://tp.com</a>
       </footer>
       <Modal open={open} footer={null} onCancel={handleClose} maskClosable={false}>
         <h1 className='text-lg font-medium mb-4'>New task</h1>
