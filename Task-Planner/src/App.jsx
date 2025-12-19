@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "animate.css";
-import {Badge, Button, Card, Form, Input, Modal, Select, Tag} from 'antd';
+import {Badge, Button, Card, DatePicker, Form, Input, Modal, Select, Tag} from 'antd';
 import {Plus} from "lucide-react"
 
 const App = () => {
@@ -32,7 +32,10 @@ const App = () => {
           <button className='w-10 h-10 bg-violet-600 rounded-full font-bold text-white'>TP</button>
           <h1 className='text-2xl font-bold ml-px'>Task Planner</h1>
         </div>
-        <h1 className='text-2xl font-bold'>{timer}</h1>
+        <div className='flex gap-4 items-center'>
+          <DatePicker />
+          <h1 className='text-2xl font-bold'>{timer}</h1>
+        </div>
       </nav>
       
       <section className='fixed top-[60px] left-0 h-[calc(100%-120px)] w-full over-x-auto overflow-y-visible grid grid-cols-3 gap-8 p-8'>
