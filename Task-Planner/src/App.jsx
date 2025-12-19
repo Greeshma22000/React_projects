@@ -27,7 +27,7 @@ const App = () => {
 
   return (
     <div className='bg-gray-200 h-screen overflow-hidden'>
-      <nav className='bg-white h-[60px] fixed top-0 left-0 w-full flex justify-between items-center px-8'>
+      <nav className='bg-gradient-to-r from-rose-500 via-slate-800 to-slate-900 text-white bg-white h-[60px] fixed top-0 left-0 w-full flex justify-between items-center px-8'>
         <div className='flex items-center gap-2'>
           <button className='w-10 h-10 bg-violet-600 rounded-full font-bold text-white'>TP</button>
           <h1 className='text-2xl font-bold ml-px'>Task Planner</h1>
