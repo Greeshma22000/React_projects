@@ -146,8 +146,8 @@ const App = () => {
       </section>
 
       <footer className='bg-white h-[60px] fixed bottom-0 left-0 w-full flex items-center justify-between px- 8'>
-        <h1 className='text-2xl font-bold'>Total tasks - 22</h1>
-        <a href="#" className='text-gray-400 hover:underline'>https://tp.com</a>
+        <h1 className='text-2xl font-bold ml-10'>Total tasks - 22</h1>
+        <a href="#" className='text-gray-400 hover:underline mr-10'>https://tp.com</a>
       </footer>
       <Modal open={open} footer={null} onCancel={handleClose} maskClosable={false}>
         <h1 className='text-lg font-medium mb-4'>New task</h1>
