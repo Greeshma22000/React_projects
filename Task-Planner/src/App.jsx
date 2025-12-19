@@ -75,7 +75,7 @@ const App = () => {
           </div>
         </div>
 
-        <div className='g:h-full lg:min-h-0 h-[300px]'>
+        <div className='lg:h-full lg:min-h-0 h-[300px]'>
           <Badge.Ribbon 
             text="Medium"
             className='!bg-gradient-to-br !from-indigo-500 !via-blue-500 !to-indigo-500 !font-medium' 
@@ -111,7 +111,7 @@ const App = () => {
           </div>
         </div>
 
-        <div className='g:h-full lg:min-h-0 h-[300px]'>
+        <div className='lg:h-full lg:min-h-0 h-[300px]'>
           <Badge.Ribbon 
             text="Low"
             className='!bg-gradient-to-br !from-amber-500 !via-orange-500 !to-amber-500 !font-medium' 
@@ -178,7 +178,7 @@ const App = () => {
             name="priority"
             rules={[{required: true}]}
           >
-            <Select>
+            <Select size='large' placeholder="Choose priority">
               <Select.Option value="high">High</Select.Option>
               <Select.Option value="medium">Medium</Select.Option>
               <Select.Option value="low">Low</Select.Option>
